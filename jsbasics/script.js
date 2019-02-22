@@ -30,60 +30,32 @@ names.push(2);
 console.log(names);*/
 
 
-var b1=124,b2=48,b3=268;
-if(b1<50)
+var tips=[],bils=[];
+function calculatetips(bill)
 {
-    var tip1=(20/100)*b1;
-    console.log("20% of 124",tip1);
+    if(bill<50)
+    {
+    tip=bill*(20/100);
 }
-else if(50<b1<200)
+else if(bill<200 && bill>50)
 {
-     tip1=(15/100)*b1;
-    console.log("15% of 124",tip1);
+    tip=bill*(15/100);
+
 }
 else{
-     tip1=(10/100)*b1;
-    console.log("10% of 124",tip1);
+    tip=bill*(10/100);
 }
-
-if(b2<50)
-{
-    var tip2=(20/100)*b2;
-    console.log("20% of 48",tip2);
+tips.push(tip);
+bill=Number(bill)+Number(tip);
+bils.push(bill);
 }
-else if(50<b2<200)
-{
-     tip2=(15/100)*b2;
-    console.log("15% of 48",tip2);
-}
-else{
-     tip2=(10/100)*b2;
-    console.log("10% of 48",tip2);
-}
-if(b3<50)
-{
-    var tip3=(20/100)*b3;
-    console.log("20% of 268",tip3);
-}
-else if(50>b3>200)
-{
-     tip3=(15/100)*b3;
-    console.log("15% of 268",tip3);
-}
-else{
-     tip3=(10/100)*b3;
-    console.log("10% of 268",tip3);
-}
+calculatetips('124');
+calculatetips('48');
+calculatetips('268');
+console.log(tips);
+console.log(bils);
 
 
-
-var totl_tip=[tip1,tip2,tip3];
-console.log("total tip",totl_tip);
-var tb1=b1+tip1;
-var tb2=b2+tip2;
-var tb3=b3+tip3;
-var total_bill=[tb1,tb2,tb3];
-console.log("total bill",total_bill);
 
 /*
 var mydetails={
