@@ -77,5 +77,19 @@ console.log(sri);
 //
 console.log('nithya is '+mydetails.calcAge(1998)+'years old');
 */
+//addevent listner example
+//document.getElementById('btn')=changeOnMouseOver;
+//document.getElementById('btn')=changeOnMouseOut;
+var but =document.getElementById('btn');
+but.addEventListener('mouseover',changeOnMouseOver);
+but.addEventListener('mouseout',changeOnMouseOut);
 
+function changeOnMouseOver(){
+    this.style.background="red"
+}
 
+function changeOnMouseOut(){
+    this.style.background="blue"
+}
+//query selctor for text manupilation
+document.querySelector("#hid").textContent="java script";
